@@ -10,7 +10,7 @@ app.get("/", (req: Request, res: Response) => {
   res.send("Hello World")
 })
 
-app.use("/", carsRoutes)
+app.use("/cars", carsRoutes)
 
 app.listen(port, () => {
   console.log(`Running at http://localhost:${port}`)

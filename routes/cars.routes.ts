@@ -1,10 +1,12 @@
 import { Router } from "express"
 import { getCarsByMake, getCars, getCarsByModel } from "../controllers/cars.controller"
+import filterVehicles from "../middleware/filterVehicles"
 
 const router = Router()
 
-router.get("/cars", getCars)
-router.get("/cars/:make", getCarsByMake)
-router.get("/cars/:make/:model", getCarsByModel)
+router.get("/", filterVehicles, getCars)
+router.get("/:make", filterVehicles, getCarsByMake)
+router.get("/:make/:model", filterVehicles, getCarsByModel)
 
 export default router
+
