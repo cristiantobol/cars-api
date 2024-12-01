@@ -1,0 +1,20 @@
+### Get All Cars
+GET http://localhost:3000/cars
+
+### Get Cars by make
+GET http://localhost:3000/cars/audi
+
+### Get Cars by make & model
+GET http://localhost:3000/cars/audi/a4
+
+### Test filter by fuel type
+GET http://localhost:3000/cars?fuelType=unleaded
+
+### Test filters after make or make & model
+GET http://localhost:3000/cars/audi?minPrice=20000
+
+### Test filters after make or make & model
+GET http://localhost:3000/cars/audi/a1?fuelType=diesel
+
+### Test api with pagination
+GET http://localhost:3000/cars?fuelType=unleaded&page=3&limit=10

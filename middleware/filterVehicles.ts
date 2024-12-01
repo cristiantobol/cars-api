@@ -3,7 +3,7 @@ import VehicleRepository, { Vehicle } from "../repositories/vehicle-repository"
 
 const repository = new VehicleRepository()
 
-const applyFilters = (vehicles: Vehicle[], filters: Record<string, any>) => {
+export const applyFilters = (vehicles: Vehicle[], filters: Record<string, any>) => {
   return vehicles.filter((vehicle) => {
     const { make, model, fuelType, minPrice, maxPrice } = filters
 
